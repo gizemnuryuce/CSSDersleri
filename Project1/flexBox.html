@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+    <title> Flexbox </title>
+
+    <style> 
+    .container 
+    {
+      display: flex;
+      
+
+      /* flex-direction: row-reverse; */
+       /* flex-direction: row; */
+        /* flex-direction: coulmn; */
+         /* flex-direction: coulmn-reverse; */
+         /*   */
+      flex-wrap: wrap;
+      /* flex-flow: row wrap; */
+
+      gap: 10px;
+
+      justify-content: center;
+      /* justify contentler rowda  */
+
+     align-items: center;
+     /* dikeyde sıralar
+        hepsi bulunduğu satırdı ortalar  */
+
+
+     /* align-content: center;  ----> bu genel ortada sıralar */
+
+      height: 500px;
+      background-color: beige;
+      padding: 15px;
+    }   
+
+    .item
+    {
+        background-color: blueviolet;
+        padding: 30px;
+        margin: 30px;
+        color: white;
+        font-size: 25px;
+        flex: 0;
+
+        
+    }
+
+    .item-1
+    {
+        align-self: flex-start;
+        /* bunu .item içinde yapsayfın hepsi etkilenirdi */
+    }
+    .item-2 
+    {
+        align-self: flex-end;
+        flex-grow: 1;
+    }
+
+    .item-3
+    {
+        flex-basis: 100px;
+        flex-shrink: 0;
+        /* 0 dediğimde hiçbir zaman 100piksel altına inme demiş oluyorum */
+    }
+    .item-4
+    {
+        margin-left: auto;
+        
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item item-1"> item1 </div> 
+        <div class="item item-2"> item2 </div> 
+        <div class="item item-3"> item3 </div> 
+        <div class="item item-4"> item4 </div>    
+    
+    </div>
+    
+</body>
+</html>    
